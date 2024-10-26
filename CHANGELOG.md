@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.3.3](https://github.com/mrkrash/Docker/compare/4d62478e74e5084c4bcddc6dab3c2dcaad8420c9..0.3.3) - 2024-10-26
+#### Bug Fixes
+- remove tag output check - ([4d62478](https://github.com/mrkrash/Docker/commit/4d62478e74e5084c4bcddc6dab3c2dcaad8420c9)) - [@mrkrash](https://github.com/mrkrash)
+
+- - -
+
 ## [0.3.2](https://github.com/mrkrash/Docker/compare/a6a59a735de895ff2445031a123c69211b608045..0.3.2) - 2024-10-26
 #### Bug Fixes
 - add tag output check - ([a6a59a7](https://github.com/mrkrash/Docker/commit/a6a59a735de895ff2445031a123c69211b608045)) - [@mrkrash](https://github.com/mrkrash)
