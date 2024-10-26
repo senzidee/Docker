@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.3.0](https://github.com/mrkrash/Docker/compare/0483fcf35ecff45abed0441f7c895379814b663f..0.3.0) - 2024-10-26
+#### Features
+- add environment to workflow - ([6daad79](https://github.com/mrkrash/Docker/commit/6daad79dfaad939500c1896df30b3299b66c873f)) - [@mrkrash](https://github.com/mrkrash)
+- add tag release to workflow - ([0483fcf](https://github.com/mrkrash/Docker/commit/0483fcf35ecff45abed0441f7c895379814b663f)) - [@mrkrash](https://github.com/mrkrash)
+
+- - -
+
 ## [0.2.1](https://github.com/mrkrash/Docker/compare/32f896bdfdc1af3eb9f37008ab1fd898129bdcb6..0.2.1) - 2024-10-26
 #### Bug Fixes
 - Caddy don't work with asterisk - ([c38ed69](https://github.com/mrkrash/Docker/commit/c38ed69ea3641dd2ac9f24b7415019611d4915b3)) - [@mrkrash](https://github.com/mrkrash)
