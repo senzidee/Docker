@@ -34,7 +34,13 @@ jobs:
 
       - name: Semver release
         id: release
-        run: echo "tag=`echo ${GITHUB_REF##*/}`" >> $GITHUB_ENV
+        run: echo "tag=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
+      - name: Check output
+        env:
+          RELEASE_VERSION: ${{ steps.release.outputs.tag }}
+        run: |
+          echo $RELEASE_VERSION
+          echo ${{ steps.release.outputs.tag }}
 
       - name: Metadata
         id: meta-data
