@@ -13,7 +13,7 @@
     }
 }
 
-*:80 {
+http:// {
     root * /app/public
     php_fastcgi localhost:9000 {
         dial_timeout 60s
