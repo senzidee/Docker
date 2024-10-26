@@ -20,6 +20,10 @@ set -e
 cog verify --file $1
 cog check
 """
+pre-push.script = """#!/bin/sh
+cog bump --auto
+"""
+
 [commit_types]
 chore = { changelog_title = "", omit_from_changelog = true }
 ci = { changelog_title = "", omit_from_changelog = true }
