@@ -45,8 +45,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          context: ./PHP83-Caddy/
-          file: ./Dockerfile
+          context: "{{defaultContext}}:PHP83-Caddy"
           build-args: APP_ENV=prod
           target: prod
 #          build-args: ARCH=${{ github.ref == format('refs/heads/{0}', 'main') && 'aarch64' || 'amd64' }}
