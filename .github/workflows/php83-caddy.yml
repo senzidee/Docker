@@ -1,6 +1,16 @@
 name: Deploy new PHP83-Caddy Docker Image
 on:
   workflow_dispatch:
+    inputs:
+      environment:
+        required: true
+        description: Environment to build and publish
+        default: prod
+        type: choice
+        options:
+          - dev
+          - stage
+          - prod
 jobs:
   build-image:
     name: Integrate last code on docker image and publish it on Ghcr.io
@@ -24,16 +34,15 @@ jobs:
 
       - name: Semver release
         id: release
-        run: echo "GIT_TAG=`echo $(git describe --tags --abbrev=0)`" >> $GITHUB_ENV
+        run: echo "tag=`echo $(git describe --tags --abbrev=0)`" >> $GITHUB_ENV
 
       - name: Metadata
         id: meta-data
         uses: docker/metadata-action@v4
         with:
-          images: ghcr.io/${{ github.repository }}-php83-caddy
+          images: ghcr.io/${{ github.repository }}-php83-caddy-${{ inputs.environment }}
           tags: |
             type=raw,value=latest
-            type=raw,value=prod
             type=raw,value=${{ steps.release.outputs.tag }}
             type=sha,format=long
 
@@ -42,8 +51,8 @@ jobs:
         with:
           push: true
           context: "{{defaultContext}}:PHP83-Caddy"
-          build-args: APP_ENV=prod
-          target: prod
+          build-args: APP_ENV=${{ inputs.environment }}
+          target: ${{ inputs.environment }}
 #          build-args: ARCH=${{ github.ref == format('refs/heads/{0}', 'main') && 'aarch64' || 'amd64' }}
 #          platforms: ${{ github.ref == format('refs/heads/{0}', 'main') && 'linux/aarch64' || 'linux/amd64' }}
           tags: ${{ steps.meta-data.outputs.tags }}
