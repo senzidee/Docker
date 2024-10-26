@@ -28,8 +28,6 @@ cog bump --auto
 chore = { changelog_title = "", omit_from_changelog = true }
 ci = { changelog_title = "", omit_from_changelog = true }
 perf = { changelog_title = "", omit_from_changelog = true }
-feat = { changelog_title = "➕ Additional features" }
-fix = { changelog_title = "🪲 Releases" }
 
 [changelog]
 path = "CHANGELOG.md"
