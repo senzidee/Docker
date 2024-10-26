@@ -3,7 +3,10 @@ ignore_merge_commits = false
 disable_changelog = false
 disable_bump_commit = false
 generate_mono_repository_global_tag = true
-branch_whitelist = []
+branch_whitelist = [
+  "main",
+  "release/**"
+]
 skip_ci = "[skip ci]"
 skip_untracked = false
 pre_bump_hooks = []
@@ -18,6 +21,11 @@ cog verify --file $1
 cog check
 """
 [commit_types]
+chore = { changelog_title = "", omit_from_changelog = true }
+ci = { changelog_title = "", omit_from_changelog = true }
+perf = { changelog_title = "", omit_from_changelog = true }
+feat = { changelog_title = "➕ Additional features" }
+fix = { changelog_title = "🪲 Releases" }
 
 [changelog]
 path = "CHANGELOG.md"
