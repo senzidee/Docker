@@ -1,0 +1,23 @@
+{
+    log {
+        output stdout
+        format console
+        level DEBUG
+    }
+    supervisor {
+        php-fpm {
+            restart_policy always
+            redirect_stdout stdout
+            redirect_stderr stderr
+        }
+    }
+}
+
+*:80 {
+    root * /app/public
+    php_fastcgi localhost:9000 {
+        dial_timeout 60s
+        capture_stderr
+    }
+    file_server
+}
