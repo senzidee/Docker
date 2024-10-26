@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.2.1](https://github.com/mrkrash/Docker/compare/32f896bdfdc1af3eb9f37008ab1fd898129bdcb6..0.2.1) - 2024-10-26
+#### Bug Fixes
+- Caddy don't work with asterisk - ([c38ed69](https://github.com/mrkrash/Docker/commit/c38ed69ea3641dd2ac9f24b7415019611d4915b3)) - [@mrkrash](https://github.com/mrkrash)
+
+- - -
+
 ## [0.2.0](https://github.com/mrkrash/Docker/compare/81dd74d8b8992ce028a1b3fef76f1fef3614f51c..0.2.0) - 2024-10-26
 #### Features
 - add MIT License - ([aefe4a0](https://github.com/mrkrash/Docker/commit/aefe4a0ce4a39ea0b110875515c622f56a67f9d2)) - [@mrkrash](https://github.com/mrkrash)
