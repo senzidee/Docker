@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.3.1](https://github.com/mrkrash/Docker/compare/e151b3e5656a2dc60675e00f3a488dd8c6331aea..0.3.1) - 2024-10-26
+#### Bug Fixes
+- tag - ([e151b3e](https://github.com/mrkrash/Docker/commit/e151b3e5656a2dc60675e00f3a488dd8c6331aea)) - [@mrkrash](https://github.com/mrkrash)
+
+- - -
+
 ## [0.3.0](https://github.com/mrkrash/Docker/compare/0483fcf35ecff45abed0441f7c895379814b663f..0.3.0) - 2024-10-26
 #### Features
 - add environment to workflow - ([6daad79](https://github.com/mrkrash/Docker/commit/6daad79dfaad939500c1896df30b3299b66c873f)) - [@mrkrash](https://github.com/mrkrash)
