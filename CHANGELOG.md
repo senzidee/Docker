@@ -2,6 +2,16 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.2.0](https://github.com/mrkrash/Docker/compare/81dd74d8b8992ce028a1b3fef76f1fef3614f51c..0.2.0) - 2024-10-26
+#### Features
+- add MIT License - ([aefe4a0](https://github.com/mrkrash/Docker/commit/aefe4a0ce4a39ea0b110875515c622f56a67f9d2)) - [@mrkrash](https://github.com/mrkrash)
+- add GitHub action for build docker prod image - ([c8152fd](https://github.com/mrkrash/Docker/commit/c8152fdc79643c6ba902dd972304c8fea9f87721)) - [@mrkrash](https://github.com/mrkrash)
+- Add docker config for php 8.3 and Caddy 2.8 - ([5620ab8](https://github.com/mrkrash/Docker/commit/5620ab877b5bb43a092b55d0a46aaf127009a729)) - [@mrkrash](https://github.com/mrkrash)
+#### Tests
+- remove cog whitelist - ([911487c](https://github.com/mrkrash/Docker/commit/911487ce4daa25881b4f26b5b34bd0d6e16fa923)) - [@mrkrash](https://github.com/mrkrash)
+
+- - -
+
 ## [0.1.0](https://github.com/mrkrash/Docker/compare/842e45b4a4a956f7f3f61891e3df79d115a03325..0.1.0) - 2024-10-26
 #### Features
 - Add Cocogitto - ([964e2d4](https://github.com/mrkrash/Docker/commit/964e2d4306f5573e4d80069ef97594ab03139496)) - [@mrkrash](https://github.com/mrkrash)
