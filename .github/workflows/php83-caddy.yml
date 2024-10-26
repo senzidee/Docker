@@ -34,7 +34,7 @@ jobs:
 
       - name: Semver release
         id: release
-        run: echo "tag=`echo $(git describe --tags --abbrev=0)`" >> $GITHUB_ENV
+        run: echo "tag=`echo ${GITHUB_REF##*/}`" >> $GITHUB_ENV
 
       - name: Metadata
         id: meta-data
