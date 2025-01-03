@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.4.0](https://github.com/mrkrash/Docker/compare/40e7779d3b79adce1e6e928d1aff7b9a11d2ec8a..0.4.0) - 2025-01-03
+#### Features
+- add artifact attestation - ([68f2647](https://github.com/mrkrash/Docker/commit/68f26473d62c889de17c5602df5acfdc3bfbad34)) - [@mrkrash](https://github.com/mrkrash)
+- add php56 - ([40e7779](https://github.com/mrkrash/Docker/commit/40e7779d3b79adce1e6e928d1aff7b9a11d2ec8a)) - [@mrkrash](https://github.com/mrkrash)
+
+- - -
+
 ## [0.3.3](https://github.com/mrkrash/Docker/compare/4d62478e74e5084c4bcddc6dab3c2dcaad8420c9..0.3.3) - 2024-10-26
 #### Bug Fixes
 - remove tag output check - ([4d62478](https://github.com/mrkrash/Docker/commit/4d62478e74e5084c4bcddc6dab3c2dcaad8420c9)) - [@mrkrash](https://github.com/mrkrash)
