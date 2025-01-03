@@ -11,6 +11,11 @@ on:
           - dev
           - stage
           - prod
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
 jobs:
   build-image:
     name: Integrate last code on docker image and publish it on Ghcr.io
@@ -18,6 +23,9 @@ jobs:
     permissions:
       packages: write
       contents: read
+      attestations: write
+      id-token: write
+
     steps:
       - name: Set up Docker Build
         uses: docker/setup-buildx-action@v2
@@ -28,25 +36,26 @@ jobs:
       - name: Login to Registry
         uses: docker/login-action@v2
         with:
-          registry: ghcr.io
+          registry: ${{ env.REGISTRY }}
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.TOKEN }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Semver release
         id: release
         run: echo "tag=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
 
-      - name: Metadata
-        id: meta-data
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ghcr.io/${{ github.repository }}-php83-caddy-${{ inputs.environment }}
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-php83-caddy-${{ inputs.environment }}
           tags: |
             type=raw,value=latest
             type=raw,value=${{ steps.release.outputs.tag }}
             type=sha,format=long
 
-      - name: Build and Push
+      - name: Build and push Docker image
+        id: push
         uses: docker/build-push-action@v4
         with:
           push: true
@@ -55,7 +64,14 @@ jobs:
           target: ${{ inputs.environment }}
 #          build-args: ARCH=${{ github.ref == format('refs/heads/{0}', 'main') && 'aarch64' || 'amd64' }}
 #          platforms: ${{ github.ref == format('refs/heads/{0}', 'main') && 'linux/aarch64' || 'linux/amd64' }}
-          tags: ${{ steps.meta-data.outputs.tags }}
-          labels: ${{ steps.meta-data.outputs.labels }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+      - name: Generate artifact attestation
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}
+          subject-digest: ${{ steps.push.outputs.digest }}
+          push-to-registry: true
