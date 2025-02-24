@@ -1,7 +1,7 @@
 FROM caddy:2.8.4-builder AS builder
 RUN xcaddy build --with github.com/baldinof/caddy-supervisor
 
-FROM php:8.3.9-fpm-alpine AS base
+FROM php:8.3.17-fpm-alpine AS base
 RUN apk --no-cache add bash patch unzip zip zlib
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
 
