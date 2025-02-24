@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.4.1](https://github.com/mrkrash/Docker/compare/3e672ebf5fbc28249c27dd7581c0a4d1eb345918..0.4.1) - 2025-02-24
+#### Bug Fixes
+- update alpine - ([3e672eb](https://github.com/mrkrash/Docker/commit/3e672ebf5fbc28249c27dd7581c0a4d1eb345918)) - [@mrkrash](https://github.com/mrkrash)
+
+- - -
+
 ## [0.4.0](https://github.com/mrkrash/Docker/compare/40e7779d3b79adce1e6e928d1aff7b9a11d2ec8a..0.4.0) - 2025-01-03
 #### Features
 - add artifact attestation - ([68f2647](https://github.com/mrkrash/Docker/commit/68f26473d62c889de17c5602df5acfdc3bfbad34)) - [@mrkrash](https://github.com/mrkrash)
