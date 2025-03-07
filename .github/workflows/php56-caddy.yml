@@ -40,9 +40,9 @@ jobs:
         id: meta-data
         uses: docker/metadata-action@v4
         with:
-          images: ghcr.io/${{ github.repository }}-php56-caddy-${{ inputs.environment }}
+          images: ghcr.io/${{ github.repository }}-php56-caddy
           tags: |
-            type=raw,value=latest
+            type=raw,value=${{ inputs.environment }}
             type=raw,value=${{ steps.release.outputs.tag }}
             type=sha,format=long
 

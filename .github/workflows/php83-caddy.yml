@@ -48,9 +48,9 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-php83-caddy-${{ inputs.environment }}
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-php83-caddy
           tags: |
-            type=raw,value=latest
+            type=raw,value=${{ inputs.environment }}
             type=raw,value=${{ steps.release.outputs.tag }}
             type=sha,format=long
 
