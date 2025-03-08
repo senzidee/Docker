@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.7.0](https://github.com/mrkrash/Docker/compare/01ebfc43924bb11c55fa45061a1f4b76028ec0cc..0.7.0) - 2025-03-08
+#### Documentation
+- add help to Makefile - ([01ebfc4](https://github.com/mrkrash/Docker/commit/01ebfc43924bb11c55fa45061a1f4b76028ec0cc)) - [@mrkrash](https://github.com/mrkrash)
+#### Features
+- remove attestation and add platforms - ([c7065b7](https://github.com/mrkrash/Docker/commit/c7065b7517d40ed44020be6b81f78c4d27612b2e)) - [@mrkrash](https://github.com/mrkrash)
+
+- - -
+
 ## [0.6.0](https://github.com/mrkrash/Docker/compare/39e3f4f4a742449e7be9edfe304ca773d6ef889e..0.6.0) - 2025-03-08
 #### Features
 - add Makefile - ([8710116](https://github.com/mrkrash/Docker/commit/87101164300ae1dcfc5918b5094ee6ecb930c737)) - [@mrkrash](https://github.com/mrkrash)
