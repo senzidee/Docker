@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.6.0](https://github.com/mrkrash/Docker/compare/39e3f4f4a742449e7be9edfe304ca773d6ef889e..0.6.0) - 2025-03-08
+#### Features
+- add Makefile - ([8710116](https://github.com/mrkrash/Docker/commit/87101164300ae1dcfc5918b5094ee6ecb930c737)) - [@mrkrash](https://github.com/mrkrash)
+- add PHP 8.3.17 Cli with Grpc - ([74780c6](https://github.com/mrkrash/Docker/commit/74780c6990109a27f4777b84452bc6b8e4aa2dfa)) - [@mrkrash](https://github.com/mrkrash)
+
+- - -
+
 ## [0.5.0](https://github.com/mrkrash/Docker/compare/8420d2a7879563f4b413f3a12206193b2bacfe0b..0.5.0) - 2025-02-24
 
 - - -
