@@ -61,10 +61,7 @@ jobs:
           build-args: APP_ENV=${{ inputs.environment }}
           target: ${{ inputs.environment }}
 #          build-args: ARCH=${{ github.ref == format('refs/heads/{0}', 'main') && 'aarch64' || 'amd64' }}
-          platforms:
-            - linux/aarch64
-            - linux/amd64
-            - linux/arm64
+          platforms: linux/aarch64,linux/amd64,linux/arm64
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
