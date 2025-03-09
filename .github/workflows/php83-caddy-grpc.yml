@@ -1,0 +1,67 @@
+name: Deploy new PHP83-Caddy-Grpc Docker Image
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        required: true
+        description: Environment to build and publish
+        default: prod
+        type: choice
+        options:
+          - dev
+          - prod
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build-image:
+    name: Integrate last code on docker image and publish it on Ghcr.io
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+
+    steps:
+      - name: Set up Docker Build
+        uses: docker/setup-buildx-action@v2
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Login to Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Semver release
+        id: release
+        run: echo "tag=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-php83-caddy-grpc
+          tags: |
+            type=raw,value=${{ inputs.environment }}
+            type=raw,value=${{ steps.release.outputs.tag }}
+            type=sha,format=long
+
+      - name: Build and push Docker image
+        id: push
+        uses: docker/build-push-action@v4
+        with:
+          push: true
+          context: "{{defaultContext}}:PHP83-Caddy-Grpc"
+          build-args: APP_ENV=${{ inputs.environment }}
+          target: ${{ inputs.environment }}
+#          build-args: ARCH=${{ github.ref == format('refs/heads/{0}', 'main') && 'aarch64' || 'amd64' }}
+          platforms: linux/aarch64,linux/amd64,linux/arm64
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
