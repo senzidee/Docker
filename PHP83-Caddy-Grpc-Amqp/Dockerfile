@@ -28,6 +28,7 @@ CMD ["caddy", "run", "--config", "/usr/local/etc/Caddyfile"]
 
 FROM base AS dev
 RUN install-php-extensions xdebug
+RUN apk add yarn
 COPY --link ./conf.d/xdebug.ini /usr/local/etc/conf.d/xdebug.ini
 COPY --link ./conf.d/error_reporting.dev.ini /usr/local/etc/conf.d/error_reporting.ini
 COPY --link ./php-fpm.d/zz-docker.dev.conf /usr/local/etc/php-fpm.d/zz-docker.conf
