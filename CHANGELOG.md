@@ -2,6 +2,18 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.8.0](https://github.com/mrkrash/Docker/compare/e86c3eb14b71e8814041a0bbcf6b5dd9115539e3..0.8.0) - 2025-03-29
+#### Bug Fixes
+- **(PHP83-Grpc)** miss conf file in prod envs - ([cdfa98c](https://github.com/mrkrash/Docker/commit/cdfa98c82267e9b9d2c0ce1d983c937f50fbe8e8)) - [@mrkrash](https://github.com/mrkrash)
+- platforms list - ([e86c3eb](https://github.com/mrkrash/Docker/commit/e86c3eb14b71e8814041a0bbcf6b5dd9115539e3)) - [@mrkrash](https://github.com/mrkrash)
+#### Documentation
+- write readme - ([3300e9d](https://github.com/mrkrash/Docker/commit/3300e9dd0697d46d60dea72ee954231e1563a56f)) - [@mrkrash](https://github.com/mrkrash)
+#### Features
+- add PHP 8.3 with Amqp - ([687fc82](https://github.com/mrkrash/Docker/commit/687fc82081b2f1d1c55e0edd36b8eb5caf0deea1)) - [@mrkrash](https://github.com/mrkrash)
+- add PHP 8.3 with Caddy and Grpc - ([7751d42](https://github.com/mrkrash/Docker/commit/7751d420e6487cc2d2c52d114afa111c5939c8ef)) - [@mrkrash](https://github.com/mrkrash)
+
+- - -
+
 ## [0.7.0](https://github.com/mrkrash/Docker/compare/01ebfc43924bb11c55fa45061a1f4b76028ec0cc..0.7.0) - 2025-03-08
 #### Documentation
 - add help to Makefile - ([01ebfc4](https://github.com/mrkrash/Docker/commit/01ebfc43924bb11c55fa45061a1f4b76028ec0cc)) - [@mrkrash](https://github.com/mrkrash)
