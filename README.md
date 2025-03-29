@@ -57,6 +57,13 @@ The configurations are designed to be modular, maintainable, and follow clean co
 
 4. Access to example application at [http://localhost:8000](http://localhost:8000)
 
+## Use Docker image
+You can use directly the image from ghcr.io hub
+
+```dockerfile
+FROM ghcr.io/senzidee/docker-php83-caddy-grpc-amqp:prod AS base
+```
+
 ## Hexagonal Architecture Support
 
 The Docker configurations in this repository are designed to support hexagonal architecture principles:
