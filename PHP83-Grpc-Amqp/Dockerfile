@@ -18,7 +18,6 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 COPY --link ./conf.d/max_allowed_stack.ini /usr/local/etc/php/conf.d/max_allowed_stack.ini
 
 WORKDIR /app
-EXPOSE 80
 
 FROM base AS dev
 RUN install-php-extensions xdebug
