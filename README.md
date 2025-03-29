@@ -21,13 +21,13 @@ The configurations are designed to be modular, maintainable, and follow clean co
 
 ## Contents
 
-/PHP56-Caddy: Docker container with Caddy 2.8.4 and PHP 5.6
-/PHP83-Caddy: Docker container with Caddy 2.8.4 and PHP 8.3
-/PHP83-Caddy-Amqp: Docker container with Caddy 2.8.4, PHP 8.3 and Amqp driver
-/PHP83-Caddy-Grpc: Docker container with Caddy 2.8.4, PHP 8.3 and Grpc driver
-/PHP83-Caddy-Grpc-Amqp: Docker container with Caddy 2.8.4, PHP 8.3, Grpc and Amqp driver
-/PHP83-Grpc: Docker container with PHP 8.3 and Grpc driver
-/PHP83-Grpc-Amqp: Docker container with PHP 8.3, Grpc and Amqp driver
+- /PHP56-Caddy: Docker container with Caddy 2.8.4 and PHP 5.6
+- /PHP83-Caddy: Docker container with Caddy 2.8.4 and PHP 8.3
+- /PHP83-Caddy-Amqp: Docker container with Caddy 2.8.4, PHP 8.3 and Amqp driver
+- /PHP83-Caddy-Grpc: Docker container with Caddy 2.8.4, PHP 8.3 and Grpc driver
+- /PHP83-Caddy-Grpc-Amqp: Docker container with Caddy 2.8.4, PHP 8.3, Grpc and Amqp driver
+- /PHP83-Grpc: Docker container with PHP 8.3 and Grpc driver
+- /PHP83-Grpc-Amqp: Docker container with PHP 8.3, Grpc and Amqp driver
 
 ## Getting Started
 
