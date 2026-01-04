@@ -31,7 +31,7 @@ env:
 
 jobs:
   build-image:
-    name: Integrate last code on docker image and publish it on Ghcr.io
+    name: Build the docker image and publish it on Ghcr.io
     runs-on: ubuntu-latest
     permissions:
       packages: write
