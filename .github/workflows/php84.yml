@@ -1,4 +1,4 @@
-name: Deploy new PHP84-Caddy Docker Image
+name: Deploy new PHP84 Docker Image
 on:
   workflow_dispatch:
     inputs:
