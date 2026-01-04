@@ -70,7 +70,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          context: "{{defaultContext}}:PHP84-{{inputs.integration}}"
+          context: "{{defaultContext}}:PHP84"
           target: ${{ inputs.integration }}-${{ inputs.environment }}
 #          build-args: ARCH=${{ github.ref == format('refs/heads/{0}', 'main') && 'aarch64' || 'amd64' }}
           platforms: linux/aarch64,linux/amd64,linux/arm64
