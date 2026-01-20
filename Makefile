@@ -40,26 +40,26 @@ build-83-grpc-amqp:
 
 build-84-all: build-84-cli build-84-amqp build-84-amqp-grpc build-84-redis build-84-redis-grpc build-84-caddy build-84-caddy-amqp build-84-caddy-redis build-83-caddy-grpc build-84-caddy-amqp-grpc build-84-caddy-grpc build-84-caddy-redis-grpc
 build-84-cli:
-	docker buildx build -t ghcr.io/senzidee/docker-php84-cli:dev --target cli-dev --cache-to type=local,dest=./.build-cache,mode=max --cache-from type=local,src=./.build-cache PHP84/
+	docker build -t ghcr.io/senzidee/docker-php84-cli:dev --target cli-dev PHP84/
 build-84-amqp:
-	docker buildx build -t ghcr.io/senzidee/docker-php84-amqp:dev --target amqp-dev --cache-to type=local,dest=./.build-cache,mode=max --cache-from type=local,src=./.build-cache  PHP84/
+	docker build -t ghcr.io/senzidee/docker-php84-amqp:dev --target amqp-dev  PHP84/
 build-84-amqp-grpc:
-	docker buildx build -t ghcr.io/senzidee/docker-php84-amqp-grpc:dev --target amqp-grpc-dev --cache-to type=local,dest=./.build-cache,mode=max --cache-from type=local,src=./.build-cache  PHP84/
+	docker build -t ghcr.io/senzidee/docker-php84-amqp-grpc:dev --target amqp-grpc-dev  PHP84/
 build-84-redis:
-	docker buildx build -t ghcr.io/senzidee/docker-php84-redis:dev --target redis-dev --cache-to type=local,dest=./.build-cache,mode=max --cache-from type=local,src=./.build-cache  PHP84/
+	docker build -t ghcr.io/senzidee/docker-php84-redis:dev --target redis-dev  PHP84/
 build-84-redis-grpc:
-	docker buildx build -t ghcr.io/senzidee/docker-php84-redis-grpc:dev --target redis-grpc-dev --cache-to type=local,dest=./.build-cache,mode=max --cache-from type=local,src=./.build-cache  PHP84/
+	docker build -t ghcr.io/senzidee/docker-php84-redis-grpc:dev --target redis-grpc-dev  PHP84/
 build-84-caddy:
-	docker buildx build -t ghcr.io/senzidee/docker-php84-caddy:dev --target caddy-dev --cache-to type=local,dest=./.build-cache,mode=max --cache-from type=local,src=./.build-cache  PHP84/
+	docker build -t ghcr.io/senzidee/docker-php84-caddy:dev --target caddy-dev  PHP84/
 build-84-caddy-amqp:
-	docker buildx build -t ghcr.io/senzidee/docker-php84-caddy-amqp:dev --target caddy-amqp-dev --cache-to type=local,dest=./.build-cache,mode=max --cache-from type=local,src=./.build-cache  PHP84/
+	docker build -t ghcr.io/senzidee/docker-php84-caddy-amqp:dev --target caddy-amqp-dev  PHP84/
 build-84-caddy-grpc:
-	docker buildx build -t ghcr.io/senzidee/docker-php84-caddy-grpc:dev --target caddy-grpc-dev --cache-to type=local,dest=./.build-cache,mode=max --cache-from type=local,src=./.build-cache  PHP84/
+	docker build -t ghcr.io/senzidee/docker-php84-caddy-grpc:dev --target caddy-grpc-dev  PHP84/
 build-84-caddy-redis:
-	docker buildx build -t ghcr.io/senzidee/docker-php84-caddy-redis:dev --target caddy-redis-dev --cache-to type=local,dest=./.build-cache,mode=max --cache-from type=local,src=./.build-cache  PHP84/
+	docker build -t ghcr.io/senzidee/docker-php84-caddy-redis:dev --target caddy-redis-dev  PHP84/
 build-84-caddy-amqp-grpc:
-	docker buildx build -t ghcr.io/senzidee/docker-php84-caddy-amqp-grpc:dev --target caddy-amqp-grpc-dev --cache-to type=local,dest=./.build-cache,mode=max --cache-from type=local,src=./.build-cache  PHP84/
+	docker build -t ghcr.io/senzidee/docker-php84-caddy-amqp-grpc:dev --target caddy-amqp-grpc-dev  PHP84/
 build-84-caddy-grpc:
-	docker buildx build -t ghcr.io/senzidee/docker-php84-caddy-grpc:dev --target caddy-grpc-dev --cache-to type=local,dest=./.build-cache,mode=max --cache-from type=local,src=./.build-cache  PHP84/
+	docker build -t ghcr.io/senzidee/docker-php84-caddy-grpc:dev --target caddy-grpc-dev  PHP84/
 build-84-caddy-redis-grpc:
-	docker buildx build -t ghcr.io/senzidee/docker-php84-caddy-redis-grpc:dev --target caddy-redis-grpc-dev --cache-to type=local,dest=./.build-cache,mode=max --cache-from type=local,src=./.build-cache  PHP84/
+	docker build -t ghcr.io/senzidee/docker-php84-caddy-redis-grpc:dev --target caddy-redis-grpc-dev  PHP84/
