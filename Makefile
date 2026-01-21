@@ -38,17 +38,17 @@ build-83-grpc:
 build-83-grpc-amqp:
 	docker build -t ghcr.io/senzidee/docker-php83-grpc-amqp:dev --target dev PHP83-Grpc-Amqp/
 
-build-84-all: build-84-cli build-84-amqp build-84-amqp-grpc build-84-redis build-84-redis-grpc build-84-caddy build-84-caddy-amqp build-84-caddy-redis build-83-caddy-grpc build-84-caddy-amqp-grpc build-84-caddy-grpc build-84-caddy-redis-grpc
+
 build-84-cli:
 	docker build -t ghcr.io/senzidee/docker-php84-cli:dev --target cli-dev PHP84/
 build-84-amqp:
-	docker build -t ghcr.io/senzidee/docker-php84-amqp:dev --target amqp-dev  PHP84/
+	docker build -t ghcr.io/senzidee/docker-php84-amqp:dev --target cli-amqp-dev  PHP84/
 build-84-amqp-grpc:
-	docker build -t ghcr.io/senzidee/docker-php84-amqp-grpc:dev --target amqp-grpc-dev  PHP84/
+	docker build -t ghcr.io/senzidee/docker-php84-amqp-grpc:dev --target cli-amqp-grpc-dev  PHP84/
 build-84-redis:
-	docker build -t ghcr.io/senzidee/docker-php84-redis:dev --target redis-dev  PHP84/
+	docker build -t ghcr.io/senzidee/docker-php84-redis:dev --target cli-redis-dev  PHP84/
 build-84-redis-grpc:
-	docker build -t ghcr.io/senzidee/docker-php84-redis-grpc:dev --target redis-grpc-dev  PHP84/
+	docker build -t ghcr.io/senzidee/docker-php84-redis-grpc:dev --target cli-redis-grpc-dev  PHP84/
 build-84-caddy:
 	docker build -t ghcr.io/senzidee/docker-php84-caddy:dev --target caddy-dev  PHP84/
 build-84-caddy-amqp:

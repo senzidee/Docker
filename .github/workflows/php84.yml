@@ -19,6 +19,8 @@ on:
           - cli
           - amqp
           - amqp-grpc
+          - redis
+          - redis-grpc
           - caddy
           - caddy-amqp
           - caddy-grpc
