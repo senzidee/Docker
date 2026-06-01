@@ -87,6 +87,9 @@ RUN install-php-extensions redis
 FROM caddy-redis-grpc-dev AS caddy-redis-amqp-grpc-dev
 RUN install-php-extensions amqp
 
+FROM caddy-redis-amqp-grpc-dev AS caddy-redis-amqp-grpc-apcu-dev
+RUN install-php-extensions apcu
+
 
 FROM cli AS cli-prod
 RUN install-php-extensions opcache
@@ -133,4 +136,10 @@ FROM caddy-grpc-prod AS caddy-amqp-grpc-prod
 RUN install-php-extensions amqp
 
 FROM caddy-grpc-prod AS caddy-redis-grpc-prod
+RUN install-php-extensions redis
+
+FROM caddy-redis-grpc-prod AS caddy-redis-amqp-grpc-prod
+RUN install-php-extensions redis
+
+FROM caddy-redis-amqp-grpc-prod AS caddy-redis-amqp-grpc-apcu-prod
 RUN install-php-extensions redis
