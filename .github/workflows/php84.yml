@@ -26,6 +26,7 @@ on:
           - caddy-grpc
           - caddy-amqp-grpc
           - caddy-grpc
+          - caddy-redis-amqp-grpc
 
 env:
   REGISTRY: ghcr.io

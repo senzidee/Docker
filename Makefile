@@ -5,21 +5,22 @@
 
 help:
 	@echo "Available targets:"
-	@echo "  build-56-caddy            Build the Docker image for PHP 5.6 with Caddy."
-	@echo "  build-83-caddy            Build the Docker image for PHP 8.3 with Caddy."
-	@echo "  build-83-caddy-amqp       Build the Docker image for PHP 8.3 with Caddy & Amqp."
-	@echo "  build-83-caddy-grpc       Build the Docker image for PHP 8.3 with Caddy & Grpc."
-	@echo "  build-83-caddy-grpc-amqp  Build the Docker image for PHP 8.3 with Caddy, Grpc & Amqp."
-	@echo "  build-83-grpc             Build the Docker image for PHP 8.3 with Grpc."
-	@echo "  build-83-grpc-amqp        Build the Docker image for PHP 8.3 with Grpc & Amqp."
-	@echo "  build-84-all              Build all Docker images for PHP 8.4"
-	@echo "  build-84-cli              Build the Docker image for PHP 8.4"
-	@echo "  build-84-caddy            Build the Docker image for PHP 8.4 with Caddy."
-	@echo "  build-84-caddy-amqp       Build the Docker image for PHP 8.4 with Caddy & Amqp."
-	@echo "  build-84-caddy-grpc       Build the Docker image for PHP 8.4 with Caddy & Grpc."
-	@echo "  build-84-caddy-grpc-amqp  Build the Docker image for PHP 8.4 with Caddy, Grpc & Amqp."
-	@echo "  build-84-grpc             Build the Docker image for PHP 8.4 with Grpc."
-	@echo "  build-84-grpc-amqp        Build the Docker image for PHP 8.4 with Grpc & Amqp."
+	@echo "  build-56-caddy                  Build the Docker image for PHP 5.6 with Caddy."
+	@echo "  build-83-caddy                  Build the Docker image for PHP 8.3 with Caddy."
+	@echo "  build-83-caddy-amqp             Build the Docker image for PHP 8.3 with Caddy & Amqp."
+	@echo "  build-83-caddy-grpc             Build the Docker image for PHP 8.3 with Caddy & Grpc."
+	@echo "  build-83-caddy-grpc-amqp        Build the Docker image for PHP 8.3 with Caddy, Grpc & Amqp."
+	@echo "  build-83-grpc                   Build the Docker image for PHP 8.3 with Grpc."
+	@echo "  build-83-grpc-amqp              Build the Docker image for PHP 8.3 with Grpc & Amqp."
+	@echo "  build-84-all                    Build all Docker images for PHP 8.4"
+	@echo "  build-84-cli                    Build the Docker image for PHP 8.4"
+	@echo "  build-84-caddy                  Build the Docker image for PHP 8.4 with Caddy."
+	@echo "  build-84-caddy-amqp             Build the Docker image for PHP 8.4 with Caddy & Amqp."
+	@echo "  build-84-caddy-grpc             Build the Docker image for PHP 8.4 with Caddy & Grpc."
+	@echo "  build-84-caddy-grpc-amqp        Build the Docker image for PHP 8.4 with Caddy, Grpc & Amqp."
+	@echo "  build-84-caddy-redis-amqp-grpc  Build the Docker image for PHP 8.4 with Caddy, Redis, Grpc & Amqp."
+	@echo "  build-84-grpc                   Build the Docker image for PHP 8.4 with Grpc."
+	@echo "  build-84-grpc-amqp              Build the Docker image for PHP 8.4 with Grpc & Amqp."
 
 all: help
 
@@ -63,3 +64,5 @@ build-84-caddy-grpc:
 	docker build -t ghcr.io/senzidee/docker-php84-caddy-grpc:dev --target caddy-grpc-dev  PHP84/
 build-84-caddy-redis-grpc:
 	docker build -t ghcr.io/senzidee/docker-php84-caddy-redis-grpc:dev --target caddy-redis-grpc-dev  PHP84/
+build-84-caddy-redis-amqp-grpc:
+	docker build -t ghcr.io/senzidee/docker-php84-caddy-redis-amqp-grpc:dev --target caddy-redis-amqp-grpc-dev  PHP84/
