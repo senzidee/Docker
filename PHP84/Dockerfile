@@ -139,7 +139,7 @@ FROM caddy-grpc-prod AS caddy-redis-grpc-prod
 RUN install-php-extensions redis
 
 FROM caddy-redis-grpc-prod AS caddy-redis-amqp-grpc-prod
-RUN install-php-extensions redis
+RUN install-php-extensions amqp
 
 FROM caddy-redis-amqp-grpc-prod AS caddy-redis-amqp-grpc-apcu-prod
-RUN install-php-extensions redis
+RUN install-php-extensions apcu
